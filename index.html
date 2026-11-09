@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORYNTRA | Programming Courses, Freelance Services & Digital Products</title>
+<meta name="description" content="ORYNTRA: learn Frontend, Backend, UI/UX, AI, Mobile, Graphic Design and Microsoft Office. Hire experts with 3+ years of experience. Ready-made digital products.">
+<meta name="theme-color" content="#4f46e5">
+<meta property="og:title" content="ORYNTRA">
+<meta property="og:description" content="Learn. Work. Build.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234f46e5'/%3E%3Cpath d='M20 44V20h14a8 8 0 010 16h-6l12 8' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="logo.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ORYNTRA","url":"https://oryntra-official.github.io/","logo":"https://oryntra-official.github.io/logo.svg"}</script>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1e2235;--mu:#5b6180;--pr:#4f46e5;--pr2:#14b8a6;--bd:#e4e7f2;--soft:#eef0ff;--sh:0 6px 24px rgba(79,70,229,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1220;--card:#181c30;--tx:#eceefa;--mu:#a0a6c4;--pr:#818cf8;--pr2:#2dd4bf;--bd:#262b47;--soft:#1f2442;--sh:none;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1220;--card:#181c30;--tx:#eceefa;--mu:#a0a6c4;--pr:#818cf8;--pr2:#2dd4bf;--bd:#262b47;--soft:#1f2442;--sh:none;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);height:100%}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Arabic",Tahoma,sans-serif;line-height:1.65;overflow-x:hidden;min-height:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--card)}
+.wrap{max-width:1100px;margin:auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--card);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:10px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.2rem;color:var(--tx);text-decoration:none;letter-spacing:.5px}
+.logo svg{width:34px;height:34px}
+.links{display:flex;gap:18px;align-items:center}
+.links a{color:var(--mu);text-decoration:none;font-weight:600;font-size:.92rem}
+.links a:hover{color:var(--pr)}
+.btn{background:var(--pr);color:#fff;border:0;border-radius:12px;padding:10px 20px;font:600 .95rem inherit;font-family:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.o{background:transparent;color:var(--pr);border:1.5px solid var(--pr)}
+.btn:disabled{opacity:.7;cursor:default}
+.theme{background:var(--soft);border:0;border-radius:10px;width:38px;height:38px;cursor:pointer;font-size:1.05rem}
+.hero{padding:52px 0 34px;text-align:center}
+.kick{color:var(--pr2);font-weight:700;margin-bottom:8px}
+.hero h1{font-size:clamp(1.9rem,5.5vw,3.1rem);font-weight:800;line-height:1.25}
+.hero h1 span{background:linear-gradient(90deg,var(--pr),var(--pr2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mu);max-width:620px;margin:14px auto 24px;font-size:1.05rem}
+.stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:9px 16px;font-weight:600;box-shadow:var(--sh)}
+.stat b{color:var(--pr)}
+section{padding:32px 0;content-visibility:auto;contain-intrinsic-size:500px}
+h2{font-size:1.55rem;font-weight:800;margin-bottom:4px}
+.sub{color:var(--mu);margin-bottom:18px}
+.tabs,.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.tab{flex:1;min-width:max-content;background:var(--card);border:1.5px solid var(--bd);color:var(--tx);border-radius:12px;padding:11px 16px;font:700 .95rem inherit;font-family:inherit;cursor:pointer}
+.tab.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+.chip{min-width:max-content;background:var(--soft);border:0;color:var(--tx);border-radius:999px;padding:7px 15px;font:600 .86rem inherit;font-family:inherit;cursor:pointer}
+.chip.on{background:var(--pr2);color:#052e2b}
+.chips{margin:14px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:1.05rem;font-weight:700}
+.card p{color:var(--mu);font-size:.92rem;flex:1}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font-size:.8rem}
+.tag{background:var(--soft);color:var(--pr);padding:3px 10px;border-radius:999px;font-weight:600}
+.tag.s{background:#fef3c7;color:#92400e}
+.ico{font-size:1.7rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.step{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px}
+.step i{font-style:normal;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--pr);color:#fff;font-weight:800;margin-bottom:8px}
+.exp{background:linear-gradient(120deg,var(--pr),var(--pr2));color:#fff;border-radius:18px;padding:20px;font-weight:600}
+.exp ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;padding:0}
+.exp li{background:rgba(255,255,255,.2);padding:4px 12px;border-radius:999px;font-size:.86rem}
+footer{border-top:1px solid var(--bd);margin-top:26px;padding:24px 0;color:var(--mu);text-align:center;font-size:.9rem}
+#bot{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);right:16px;z-index:70}
+#fab{width:56px;height:56px;border-radius:50%;border:0;background:linear-gradient(135deg,var(--pr),var(--pr2));color:#fff;font-size:1.5rem;cursor:pointer;box-shadow:0 8px 22px rgba(79,70,229,.4)}
+#box{display:none;position:absolute;bottom:68px;right:0;width:min(350px,calc(100vw - 32px));height:min(470px,70vh);background:var(--card);border:1px solid var(--bd);border-radius:18px;overflow:hidden;flex-direction:column;box-shadow:0 12px 40px rgba(0,0,0,.2)}
+#box.open{display:flex}
+.bh{background:linear-gradient(120deg,var(--pr),var(--pr2));color:#fff;padding:12px 16px;font-weight:800}
+.bh small{display:block;font-weight:400;opacity:.9}
+#msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:85%;padding:9px 13px;border-radius:14px;font-size:.92rem;white-space:pre-line;overflow-wrap:anywhere}
+.m.b{background:var(--soft);align-self:flex-start;border-top-left-radius:4px}
+.m.u{background:var(--pr);color:#fff;align-self:flex-end;border-top-right-radius:4px}
+.act{display:block;margin-top:8px;background:var(--pr);color:#fff;border:0;border-radius:10px;padding:6px 12px;font:600 .82rem inherit;font-family:inherit;cursor:pointer}
+.qr{display:flex;gap:6px;flex-wrap:wrap;padding:0 12px 8px}
+.qr button{background:transparent;border:1px solid var(--pr);color:var(--pr);border-radius:999px;padding:4px 11px;font:600 .8rem inherit;font-family:inherit;cursor:pointer}
+.in{display:flex;border-top:1px solid var(--bd)}
+.in input{flex:1;border:0;background:transparent;color:var(--tx);padding:12px;font:1rem inherit;font-family:inherit;outline:none;min-width:0}
+.in button{border:0;background:var(--pr);color:#fff;padding:0 18px;font:700 .95rem inherit;font-family:inherit;cursor:pointer}
+#toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 18px;border-radius:12px;display:none;z-index:95;font-weight:600;max-width:90vw;text-align:center}
+.ov{position:fixed;inset:0;background:rgba(10,12,30,.55);z-index:90;display:none;align-items:center;justify-content:center;padding:16px}.ov.open{display:flex}
+.md{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:18px;width:min(440px,100%);max-height:88vh;display:flex;flex-direction:column;overflow:hidden}
+.md h3{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-bottom:1px solid var(--bd);font-size:1.05rem}
+.md .bd{padding:14px 16px;display:flex;flex-direction:column;gap:10px;overflow-y:auto}
+.md input,.md textarea{width:100%;border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:10px;padding:10px;font:1rem inherit;font-family:inherit}
+.md small{color:var(--mu)}.x{background:var(--soft);border:0;border-radius:8px;width:32px;height:32px;cursor:pointer;color:var(--tx)}
+.ok{background:#d1fae5;color:#065f46;padding:12px;border-radius:12px;font-weight:700}
+.mx{display:flex;flex-direction:column;gap:8px;overflow-y:auto;height:230px;padding:8px;background:var(--bg);border-radius:12px}
+#cfab{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);left:16px;z-index:70;border:0;border-radius:999px;background:var(--pr2);color:#052e2b;padding:14px 18px;font:800 .92rem inherit;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px rgba(20,184,166,.4)}
+#cb{display:none;background:#ef4444;color:#fff;border-radius:999px;padding:0 7px;margin-left:4px;font-size:.8rem}
+.row{display:flex;gap:8px;flex-wrap:wrap}.row .btn{padding:7px 14px}
+.li{border:1px solid var(--bd);border-radius:12px;padding:9px 12px;cursor:pointer;background:var(--bg);text-align:left;color:var(--tx);font:inherit}.li.on{border-color:var(--pr);background:var(--soft)}
+.vid{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000}.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:640px){.links a{display:none}.hero{padding-top:34px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#top" aria-label="ORYNTRA"><svg viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f46e5"/><stop offset="1" stop-color="#14b8a6"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#g)"/><path d="M20 44V20h14a8 8 0 010 16h-6l12 8" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>ORYNTRA</a>
+<nav class="links"><a href="#hub">Courses &amp; Services</a><a href="#guide">How it works</a><a href="#exp">Experience</a></nav>
+<button class="theme" id="th" aria-label="Toggle theme">🌓</button>
+</div></header>
+<main id="top">
+<div class="wrap hero">
+<div class="kick">أهلاً بيك في ORYNTRA 👋</div>
+<h1>Learn. Work. <span>Build your future.</span></h1>
+<p>Programming and design courses, freelance services and ready-made digital products, all in one fast and simple platform.</p>
+<a class="btn" href="#hub">Get started</a> <a class="btn o" href="#guide">How it works</a>
+<div class="stats"><div class="stat"><b>7</b> fields</div><div class="stat"><b>3+ years</b> experience in each</div><div class="stat">AI assistant <b>ORYN</b></div></div>
+</div>
+<section id="hub"><div class="wrap">
+<h2>Explore</h2><p class="sub">Pick a section, then choose your field.</p>
+<div class="tabs" id="tabs"></div><div class="chips" id="chips"></div><div class="grid" id="grid"></div>
+</div></section>
+<section id="guide"><div class="wrap">
+<h2>How it works</h2><p class="sub">Four simple steps.</p>
+<div class="steps">
+<div class="step"><i>1</i><h3>Choose a section</h3><p>Courses, freelance work, or digital products.</p></div>
+<div class="step"><i>2</i><h3>Pick your field</h3><p>Use the bar above the cards and browse the details.</p></div>
+<div class="step"><i>3</i><h3>Book or request</h3><p>Book a course seat, or message us about a service or product.</p></div>
+<div class="step"><i>4</i><h3>Learn or receive</h3><p>Start learning or get your work delivered. ORYN is here if you need help.</p></div>
+</div></div></section>
+<section id="exp"><div class="wrap"><div class="exp">3+ years of hands-on experience in every field we offer:<ul id="expl"></ul></div></div></section>
+</main>
+<footer><div class="wrap">© 2026 ORYNTRA · اتعلّم · اشتغل · ابني</div></footer>
+<div id="toast"></div>
+<div id="bot"><div id="box"><div class="bh">ORYN<small>ORYNTRA smart assistant</small></div><div id="msgs"></div><div class="qr" id="qr"></div>
+<div class="in"><input id="inp" placeholder="Ask me anything…" autocomplete="off"><button id="send">Send</button></div></div>
+<button id="fab" aria-label="Open ORYN assistant">💬</button></div>
+
+<script>
+/* ===== EDIT YOUR CONTENT HERE ===== */
+var FIELDS=[
+{id:"fe",n:"Frontend Developer",i:"🖥️",
+ c:[["HTML & CSS from Scratch","Beginner","6 weeks","Build responsive web pages from zero."],["Professional JavaScript","Intermediate","8 weeks","From the basics to the DOM and APIs."],["React for Real Projects","Intermediate","8 weeks","Build modern, component-based web apps."]],
+ s:[["Business Website","Fast pages with a professional look."],["Landing Page","A page designed to convert visitors."],["Design to Code","Turn Figma designs into a working site."]]},
+{id:"be",n:"Backend",i:"⚙️",
+ c:[["Backend Fundamentals","Beginner","6 weeks","Servers, APIs and application logic."],["Node.js & Express","Intermediate","8 weeks","Build a complete REST API."],["Databases","Intermediate","6 weeks","SQL, NoSQL and schema design."]],
+ s:[["API Development","Secure and fast backend APIs."],["Auth System","Login, signup and user roles."],["Admin Dashboard","Manage your project data easily."]]},
+{id:"ux",n:"UI/UX",i:"🎨",
+ c:[["UI/UX Principles","Beginner","5 weeks","Design experiences users enjoy."],["Figma from Zero","Beginner","6 weeks","Design screens and prototypes."],["Design Systems","Advanced","4 weeks","Build a consistent system for your product."]],
+ s:[["Website UI Design","A modern, easy-to-use interface."],["App Screens Design","Complete mobile app design."],["UX Review","Audit and improve your current product."]]},
+{id:"ai",n:"AI",i:"🤖",
+ c:[["Intro to AI","Beginner","5 weeks","Core concepts and tools."],["Python for AI","Intermediate","8 weeks","Python and data analysis."],["Build a Chatbot","Intermediate","6 weeks","Create a smart assistant for your project."]],
+ s:[["Business Chatbot","Automatic replies for your customers."],["Task Automation","Save time with AI workflows."],["Data Analysis","Turn your numbers into decisions."]]},
+{id:"mo",n:"Mobile App Developer",i:"📱",
+ c:[["Mobile App Basics","Beginner","6 weeks","From idea to a working app."],["Flutter","Intermediate","10 weeks","One codebase for Android and iPhone."],["Publishing Your App","Intermediate","3 weeks","Store release, step by step."]],
+ s:[["Android & iOS App","A complete app from one codebase."],["Website to App","Reach customers on their phones."],["App Maintenance","Updates and fixes, ongoing."]]},
+{id:"gd",n:"Graphic Design",i:"🖌️",
+ c:[["Graphic Design Basics","Beginner","5 weeks","Color, type and composition."],["Photoshop","Intermediate","6 weeks","Professional photo editing and design."],["Illustrator & Branding","Intermediate","7 weeks","Logos and full visual identities."]],
+ s:[["Logo Design","A logo that tells your story."],["Brand Identity","Colors, fonts and brand assets."],["Social Media Designs","Eye-catching posts for your page."]]},
+{id:"of",n:"Microsoft Office",i:"📊",
+ c:[["Professional Word","Beginner","3 weeks","Formatting and writing documents."],["Excel Zero to Pro","Intermediate","6 weeks","Formulas, tables and analysis."],["PowerPoint","Beginner","3 weeks","Presentations that make an impact."]],
+ s:[["Word Formatting","Clean, print-ready documents."],["Excel Reports","Formulas and automatic reports."],["PowerPoint Decks","Professional slides for your talk."]]}
+];
+var PRODUCTS=[["🧩","Website Templates","Responsive HTML templates, easy to customize."],["🎛️","Figma UI Kits","Ready components that save design time."],["📘","E-books","Summaries and guides in every field."],["💻","Source Code","Complete projects to learn from."],["🗂️","Excel & Word Templates","Ready-made forms for work and study."],["🖼️","Graphic Packs","Logos, mockups and design elements."]];
+/* ================================== */
+var tabs=[["c","📚 Courses"],["s","💼 Freelance"],["p","🛍️ Digital Products"]],tab="c",fld=0;
+var $=function(i){return document.getElementById(i)};
+function toast(t){var e=$("toast");e.textContent=t;e.style.display="block";setTimeout(function(){e.style.display="none"},3500)}
+function order(t){if(window.oryRoute)oryRoute(t)}
+function render(){
+ $("tabs").innerHTML=tabs.map(function(t){return '<button class="tab'+(t[0]==tab?' on':'')+'" data-t="'+t[0]+'">'+t[1]+'</button>'}).join("");
+ $("chips").style.display=tab=="p"?"none":"flex";
+ $("chips").innerHTML=FIELDS.map(function(f,k){return '<button class="chip'+(k==fld?' on':'')+'" data-f="'+k+'">'+f.i+" "+f.n+'</button>'}).join("");
+ var h="",f=FIELDS[fld],MYb=window.MY||{};
+ if(tab=="c")f.c.forEach(function(c){h+='<div class="card"><div class="ico">'+f.i+'</div><h3>'+c[0]+'</h3><p>'+c[3]+'</p><div class="meta"><span class="tag">'+c[1]+'</span><span class="tag">'+c[2]+'</span><span class="tag s">Coming soon</span></div>'+'<div class="row"><button class="btn o" data-l="'+c[0]+'">▶ Lessons</button>'+(MYb[c[0]]?'<button class="btn o" disabled>✅ Booked</button>':'<button class="btn" data-o="'+c[0]+'">Book your seat</button>')+'</div></div>'});
+ if(tab=="s")f.s.forEach(function(c){h+='<div class="card"><div class="ico">'+f.i+'</div><h3>'+c[0]+'</h3><p>'+c[1]+'</p><div class="meta"><span class="tag">'+f.n+'</span><span class="tag">3+ years experience</span></div><button class="btn" data-o="'+c[0]+'">Request service</button></div>'});
+ if(tab=="p")PRODUCTS.forEach(function(c){h+='<div class="card"><div class="ico">'+c[0]+'</div><h3>'+c[1]+'</h3><p>'+c[2]+'</p><div class="meta"><span class="tag s">Coming soon</span></div><button class="btn" data-o="'+c[1]+'">Ask about this</button></div>'});
+ $("grid").innerHTML=h}
+document.addEventListener("click",function(e){var t=e.target;
+ if(t.dataset.t){tab=t.dataset.t;render()}
+ if(t.dataset.f){fld=+t.dataset.f;render()}
+ if(t.dataset.o)order(t.dataset.o);
+ if(t.dataset.q)ask(t.dataset.q);
+ if(t.dataset.go){var p=t.dataset.go.split("|");tab=p[0];fld=+p[1]||0;render();$("box").classList.remove("open");$("hub").scrollIntoView()}});
+$("expl").innerHTML=FIELDS.map(function(f){return "<li>"+f.n+"</li>"}).join("");
+$("th").onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"};
+
+/* ===== ORYN assistant ===== */
+var INFO={
+fe:{d:"You build what users see and touch on websites: layout, motion and mobile responsiveness.",w:"Great if you like seeing results instantly and enjoy mixing code with design.",al:["frontend","front end","html","css","javascript","react","website","web","landing","فرونت"]},
+be:{d:"You build what runs behind the scenes: servers, databases and APIs.",w:"Great if you enjoy logic and solving problems.",al:["backend","back end","server","node","api","database","sql","باك"]},
+ux:{d:"You design how products look and feel, so they are easy and enjoyable to use.",w:"Great if you have taste and care about people.",al:["ui/ux","ui ux","ux","ui","figma","user experience"]},
+ai:{d:"You learn to build smart tools: data analysis, chatbots and automation.",w:"Great if you like experimenting and Python.",al:["ai","artificial intelligence","python","chatbot","automation","machine learning","ذكاء"]},
+mo:{d:"You build apps that run on Android and iPhone.",w:"Great if you want your own app on the stores.",al:["mobile","app","apps","flutter","android","ios","iphone","موبايل"]},
+gd:{d:"You create logos, brand identities, social posts and polished visuals.",w:"Great if you love color and creativity.",al:["graphic","logo","photoshop","illustrator","branding","social media","جرافيك"]},
+of:{d:"You master Word, Excel and PowerPoint for work and study.",w:"Great for students and professionals who want to get things done fast.",al:["office","excel","word","powerpoint","اوفيس"]}};
+var INTENTS=[
+["greet",["hi","hello","hey","good morning","good evening","اهلا","مرحبا","سلام"]],
+["thanks",["thanks","thank you","thx","شكرا"]],
+["me",["who are you","your name","oryn"]],
+["about",["oryntra","about","what is this","platform","what do you offer","what do you do"]],
+["guide",["how does it work","how to use","guide","instructions","steps","how it works"]],
+["exp",["experience","years","team","trust","qualified"]],
+["contact",["contact","whatsapp","email","call","reach","phone","message you"]],
+["cert",["certificate","certification","certified"]],
+["status",["when","available","coming soon","launch","live","released"]],
+["gear",["laptop","computer","requirements","internet","device"]],
+["career",["job","salary","career","hire","income","employment"]],
+["design",["design","designer"]],
+["price",["price","prices","cost","how much","fee","free","discount","pay","سعر"]],
+["time",["duration","how long","weeks","hours","how many"]],
+["level",["level","levels","advanced","intermediate"]],
+["start",["start","begin","beginner","from scratch","where to","recommend","suggest","advice","which field","choose","confused","not sure","ابدا"]],
+["order",["order","register","book","booking","enroll","sign up","buy","join","حجز"]],
+["freelance",["freelance","service","services","project","work with","hire"]],
+["courses",["course","courses","learn","learning","training","class","lesson","كورس"]],
+["products",["product","products","template","templates","ebook","e-book","source code","ui kit","digital"]]];
+var FA=["courses","freelance","price","time","level","start","order"];
+var nz=function(s){return s.toLowerCase().replace(/[\u064B-\u0652\u0640]/g,"").replace(/[أإآ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه").replace(/[^\u0600-\u06FFa-z0-9\/ ]/g," ").replace(/\s+/g," ").trim()};
+var has=function(t,k){return k.length<4?(" "+t+" ").indexOf(" "+k+" ")>-1:t.indexOf(k)>-1};
+INTENTS.forEach(function(i){i[1]=i[1].map(nz)});
+for(var k in INFO)INFO[k].al=INFO[k].al.map(nz);
+var ctx={f:null,miss:0};
+var MAIN=["Courses","Freelance services","Digital products","Where do I start?","Contact"];
+var F=function(id){return FIELDS.filter(function(f){return f.id==id})[0]};
+var IX=function(id){return FIELDS.indexOf(F(id))};
+var R=function(t,a,q){return{t:t,a:a||[],q:q||MAIN}};
+var FQ=function(f){return["Courses in "+f.n,"Services in "+f.n,"Prices","Duration","Where do I start?"]};
+var go=function(tb,id,l){return{l:l,tb:tb,f:IX(id)}};
+var NAMES=function(){return FIELDS.map(function(f){return f.n}).join(", ")};
+var FN=function(){return FIELDS.map(function(x){return x.n})};
+function detect(t){return FIELDS.filter(function(f){return INFO[f.id].al.some(function(a){return has(t,a)})}).map(function(f){return f.id})}
+function weeks(){var n=[];FIELDS.forEach(function(f){f.c.forEach(function(c){n.push(parseInt(c[2]))})});return[Math.min.apply(0,n),Math.max.apply(0,n)]}
+function reply(raw){
+ var t=nz(raw),fs=detect(t),best=null,bs=0;
+ INTENTS.forEach(function(i){var s=0;i[1].forEach(function(k){if(has(t,k))s+=k.length});if(s>bs){bs=s;best=i[0]}});
+ if(fs.length==1)ctx.f=fs[0];
+ var id=fs[0]||(FA.indexOf(best)>-1?ctx.f:null),f=id?F(id):null,i=id?INFO[id]:null,d0=FIELDS[0].id;
+ ctx.miss=0;
+ if(fs.length>1&&/difference|vs|versus|better|compare|or /.test(t)){var a=F(fs[0]),b=F(fs[1]);
+  return R("Quick comparison:\n\n"+a.i+" "+a.n+": "+INFO[a.id].d+"\n\n"+b.i+" "+b.n+": "+INFO[b.id].d+"\n\nPick the one that excites you more, or tell me what you enjoy and I will recommend one.",[go("c",a.id,a.n+" courses"),go("c",b.id,b.n+" courses")],["Where do I start?","Courses"]);}
+ switch(best){
+ case"greet":return R("أهلاً! Welcome to ORYNTRA 👋 I'm ORYN. I can help you choose a field and explore our courses, services and products. Where would you like to start?");
+ case"thanks":return R("You're welcome! Ask me anything else anytime 😊");
+ case"me":return R("I'm ORYN, the ORYNTRA assistant. I answer questions about our courses, freelance services and digital products, and I can recommend the right field for you.");
+ case"about":return R("ORYNTRA brings 3 things together:\n📚 Programming and design courses\n💼 Freelance services from experts with 3+ years of experience in each field\n🛍️ Ready-made digital products\n\nFields: "+NAMES()+".");
+ case"guide":return R("It is simple:\n1) Choose a section (Courses / Freelance / Products)\n2) Pick a field above the cards\n3) Book a course seat, or message us about a service or product\n4) We follow up with details, and I'm here to help anytime.",[go("c",d0,"Open the platform")]);
+ case"exp":return R("The ORYNTRA team has 3+ years of hands-on experience in every field we offer: "+NAMES()+".");
+ case"contact":return R("Use the ✉️ Message us button (bottom-left) to chat with the team directly, and we will reply there.");
+ case"cert":return R("Certificate details are not final yet. Book a seat in the course you like and we will keep you updated.",[go("c",id||d0,"Open courses")]);
+ case"status":return R("Courses and digital products are marked “Coming soon” right now. Book your seat and we will notify you as soon as they launch. Freelance requests are open: message us and we will reply.",[go("c",id||d0,"Book a seat")]);
+ case"gear":return R("A regular laptop and an internet connection are usually enough. If a course needs specific software, it will be listed in the course details.");
+ case"career":return R("Practical skills and real projects are what open doors to jobs and freelance work. Income varies from person to person, so I cannot promise numbers. Start with a course, build projects, then take on freelance work.",[],["Where do I start?","Courses"]);
+ case"design":if(!id)return R("We have two design paths:\n🎨 UI/UX: screens, websites, apps and user experience\n🖌️ Graphic Design: logos, branding and social posts\n\nWhich sounds closer to you?",[go("c","ux","UI/UX courses"),go("c","gd","Graphic Design courses")],["Where do I start?","Courses"]);break;
+ case"products":return R("Digital products:\n"+PRODUCTS.map(function(p){return p[0]+" "+p[1]}).join("\n")+"\n\nAll coming soon. Message us to ask about any of them.",[{l:"Open products",tb:"p",f:0}]);
+ case"price":return R("Prices depend on the course or service"+(f?" (in "+f.n+")":"")+". Freelance pricing depends on the size of the work. Book a seat or message us and we will send exact pricing.",f?[go("c",id,f.n+" courses"),go("s",id,f.n+" services")]:[],f?FQ(f):MAIN);
+ case"time":if(f)return R(f.n+" course durations:\n"+f.c.map(function(c){return"• "+c[0]+": "+c[2]}).join("\n"),[go("c",id,"Open courses")],FQ(f));
+  var w=weeks();return R("Courses run from about "+w[0]+" to "+w[1]+" weeks. Pick a field and I will list each course duration.",[],FN());
+ case"level":if(f)return R(f.n+" course levels:\n"+f.c.map(function(c){return"• "+c[0]+": "+c[1]}).join("\n"),[go("c",id,"Open courses")],FQ(f));
+  return R("Levels range from Beginner to Advanced, and every course card shows its level. Pick a field for details.",[],FN());
+ case"start":if(f)return R("Suggested path in "+f.n+":\n"+f.c.map(function(c,k){return(k+1)+") "+c[0]+" ("+c[1]+")"}).join("\n")+"\n\n"+i.w,[go("c",id,"Open courses")],FQ(f));
+  return R("Tell me what you enjoy and I will suggest a path:\n• Building websites → Frontend, then Backend\n• Design → UI/UX or Graphic Design\n• Making apps → Mobile App Developer\n• Data and smart tools → AI\n• Getting work or study done fast → Microsoft Office\n\nComplete beginner? Start with HTML & CSS or Microsoft Office.",[],FN());
+ case"order":if(f)return R("To get started in "+f.n+":\n• Freelance service: open Freelance and press “Request service”\n• Course: open Courses and press “Book your seat”\nWe will follow up with details.",[go("s",id,"Request a service"),go("c",id,"Book a course")],FQ(f));
+  return R("Choose a field first, then press “Book your seat” on a course or “Request service” on a service.",[go("s",d0,"Freelance"),go("c",d0,"Courses")],FN());
+ case"freelance":if(f)return R(f.i+" "+f.n+" services (3+ years of experience):\n"+f.s.map(function(s){return"• "+s[0]+": "+s[1]}).join("\n"),[go("s",id,"Request a "+f.n+" service")],FQ(f));
+  return R("We offer freelance services in all 7 fields. Choose one and I will show what is available:",[go("s",d0,"Open Freelance")],FN());
+ case"courses":if(f)return R(f.i+" "+f.n+" courses:\n"+f.c.map(function(c){return"• "+c[0]+" ("+c[1]+", "+c[2]+")"}).join("\n")+"\n\nCurrently “Coming soon”. Book a seat and we will notify you.",[go("c",id,"Open courses")],FQ(f));
+  return R("We have courses in 7 fields: "+NAMES()+". Which one interests you?",[go("c",d0,"Open courses")],FN());
+ }
+ if(f)return R(f.i+" "+f.n+"\n"+i.d+"\n"+i.w+"\n\nCourses: "+f.c.map(function(c){return c[0]}).join(", ")+"\nServices: "+f.s.map(function(s){return s[0]}).join(", "),[go("c",id,"Courses"),go("s",id,"Services")],FQ(f));
+ ctx.miss++;
+ return R("That is outside what I can help with 🙏 I focus on ORYNTRA: courses, freelance services, digital products and choosing the right field for you."+(ctx.miss>1?"\n\nFor anything else, use the ✉️ Message us button to talk to the team.":"\nTry asking about a specific field, or tap a button below."));
+}
+function say(t,c,acts){var d=document.createElement("div");d.className="m "+c;d.textContent=t;
+ (acts||[]).forEach(function(a){var b=document.createElement("button");b.className="act";b.textContent=a.l;b.dataset.go=a.tb+"|"+a.f;d.appendChild(b)});
+ $("msgs").appendChild(d);$("msgs").scrollTop=1e9}
+function setQR(q){$("qr").innerHTML=q.slice(0,5).map(function(x){return'<button data-q="'+x+'">'+x+'</button>'}).join("")}
+function ask(q){say(q,"u");var r=reply(q);setTimeout(function(){say(r.t,"b",r.a);setQR(r.q)},300)}
+say("Hi! I'm ORYN 👋 Ask me about any field, course or service, or tell me what you enjoy and I will recommend where to start.","b");setQR(MAIN);
+$("fab").onclick=function(){$("box").classList.toggle("open")};
+function sendMsg(){var v=$("inp").value.trim();if(v){$("inp").value="";ask(v)}}
+$("send").onclick=sendMsg;$("inp").onkeydown=function(e){if(e.key=="Enter")sendMsg()};
+render();
+</script>
+
+<script>
+(function(){
+/* ===== CHAT & BOOKING SETTINGS ===== */
+var CFG={firebase:null,adminEmail:"",adminPin:"1234"}; // firebase: paste your project config. adminPin: demo mode only
+var E=function(t,c,x,p){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;if(p)p.appendChild(e);return e};
+var LS={g:function(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}},s:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var me=LS.g("oryn_id",null);if(!me){me="u"+Math.random().toString(36).slice(2,10)+Date.now().toString(36);LS.s("oryn_id",me)}
+var prof=LS.g("oryn_prof",{}),myMsgs=[],lastSeen=LS.g("oryn_seen",0),adm={ok:0,t:"b",bk:[],ms:[],sel:null,draft:""};
+window.MY={};
+var L={fs:[],init:function(){return Promise.resolve()},get:function(c){return LS.g("oryn_"+c,[])},
+ add:function(c,o){var a=L.get(c);o.id="i"+Date.now()+Math.random().toString(36).slice(2,5);a.push(o);LS.s("oryn_"+c,a);L.fs.forEach(function(f){f()});return Promise.resolve()},
+ watch:function(c,all,cb){var last,f=function(){var a=L.get(c).filter(function(x){return all||x.uid==me}),s=JSON.stringify(a);if(s!==last){last=s;cb(a)}};L.fs.push(f);f();addEventListener("storage",f);setInterval(f,3000)},
+ login:function(p){return Promise.resolve(p===CFG.adminPin)}};
+function load(l,i){return i>=l.length?Promise.resolve():new Promise(function(r,j){var s=E("script");s.src=l[i];s.onload=r;s.onerror=j;document.head.appendChild(s)}).then(function(){return load(l,i+1)})}
+var FB={init:function(){return load(["app","auth","firestore"].map(function(x){return"https://www.gstatic.com/firebasejs/10.12.0/firebase-"+x+"-compat.js"}),0).then(function(){firebase.initializeApp(CFG.firebase);return firebase.auth().signInAnonymously()}).then(function(c){me=c.user.uid})},
+ add:function(c,o){return firebase.firestore().collection(c).add(o)},
+ watch:function(c,all,cb){var q=firebase.firestore().collection(c);q=all?q.orderBy("t","desc").limit(300):q.where("uid","==",me);q.onSnapshot(function(s){cb(s.docs.map(function(d){return Object.assign({id:d.id},d.data())}))},function(){})},
+ login:function(p){return firebase.auth().signInWithEmailAndPassword(CFG.adminEmail,p).then(function(){return true},function(){return false})}};
+var B=L,cloud=!!CFG.firebase;
+var mk=function(id,h,s){var o=E("div","ov",null,document.body);o.id=id;o.innerHTML='<div class="md"'+(s||"")+'>'+h+'</div>';return o};
+var ov1=mk("mchat",'<h3>💬 Message the ORYNTRA team <button class="x" data-c>✕</button></h3><div class="bd"><div id="cprof"><input id="cn" placeholder="Your name"><input id="cc" placeholder="Phone or email (optional)" style="margin-top:8px"></div><div class="mx" id="cmsgs"></div><textarea id="ct" rows="2" placeholder="Write your question or request…"></textarea><button class="btn" id="cs">Send</button><small>We reply here as soon as possible.</small></div>');
+var ov2=mk("mbook",'<h3>📅 Book a course seat <button class="x" data-c>✕</button></h3><div class="bd" id="bf"><b id="bc"></b><input id="bn" placeholder="Your name"><input id="bt" placeholder="Phone or email"><textarea id="bo" rows="2" placeholder="Notes (optional)"></textarea><button class="btn" id="bs">Confirm booking</button></div><div class="bd" id="bd2" style="display:none"><div class="ok" id="bm"></div><button class="btn o" data-c>Done</button></div>');
+var ov3=mk("madm",'<h3>🛠️ ORYNTRA Admin <button class="x" data-c>✕</button></h3><div class="bd" id="ab"></div>',' style="width:min(780px,100%);height:88vh"');
+var fab=E("button",null,null,document.body);fab.id="cfab";fab.innerHTML='✉️ Message us <span id="cb"></span>';
+var ft=document.querySelector("footer .wrap");if(ft)ft.insertAdjacentHTML("beforeend",' · <a href="#admin" style="color:inherit">Admin</a>');
+var fmt=function(t){return new Date(t).toLocaleString("en-GB",{dateStyle:"short",timeStyle:"short"})};
+function drawChat(){var c=$("cmsgs");c.innerHTML="";if(!myMsgs.length)E("div","m b","Hi 👋 Write your question or what you need and we will reply.",c);myMsgs.forEach(function(m){E("div","m "+(m.from=="c"?"u":"b"),m.text,c)});c.scrollTop=1e9;$("cprof").style.display=prof.name?"none":"block"}
+function badge(){var n=myMsgs.filter(function(m){return m.from=="a"&&m.t>lastSeen}).length,b=$("cb");b.textContent=n||"";b.style.display=n?"inline-block":"none"}
+function seen(){lastSeen=Date.now();LS.s("oryn_seen",lastSeen);badge()}
+function openChat(p){ov1.classList.add("open");drawChat();if(p)$("ct").value=p;seen()}
+function openBook(c){$("bc").textContent="📚 "+c;$("bn").value=prof.name||"";$("bt").value=prof.contact||"";$("bo").value="";$("bf").style.display="flex";$("bd2").style.display="none";ov2.classList.add("open");ov2.dataset.c=c}
+window.oryRoute=function(t){if(tab=="c")openBook(t);else openChat("Hi, I'd like to ask about: "+t);return true};
+fab.onclick=function(){openChat()};
+$("cs").onclick=function(){var t=$("ct").value.trim();if(!t)return;if(!prof.name){var n=$("cn").value.trim();if(!n){toast("Please enter your name first");return}prof={name:n,contact:$("cc").value.trim()};LS.s("oryn_prof",prof)}
+ B.add("msgs",{uid:me,name:prof.name,contact:prof.contact||"",from:"c",text:t,t:Date.now()}).then(function(){$("ct").value=""}).catch(function(){toast("Could not send, please try again")})};
+$("bs").onclick=function(){var n=$("bn").value.trim(),t=$("bt").value.trim(),c=ov2.dataset.c;if(!n||!t){toast("Please enter your name and a contact");return}
+ prof={name:n,contact:t};LS.s("oryn_prof",prof);
+ B.add("bookings",{uid:me,name:n,contact:t,notes:$("bo").value.trim(),course:c,field:FIELDS[fld].n,t:Date.now()}).then(function(){MY[c]=1;render();$("bf").style.display="none";$("bd2").style.display="flex";$("bm").textContent="✅ Booked! Your seat in “"+c+"” is reserved. We will contact you with the details."}).catch(function(){toast("Booking failed, please try again")})};
+document.addEventListener("click",function(e){var t=e.target,o=t.classList.contains("ov")?t:(t.hasAttribute&&t.hasAttribute("data-c")?t.closest(".ov"):null);if(!o)return;o.classList.remove("open");if(o.id=="madm"){try{history.replaceState(null,"",location.pathname+location.search)}catch(x){}}});
+function drawAdm(){var ab=$("ab");ab.innerHTML="";E("small",null,cloud?"🟢 Connected to the database":"🟡 Demo mode: data is stored in this browser only",ab);
+ if(!adm.ok){var i=E("input",null,null,ab);i.type="password";i.placeholder=cloud?"Admin password":"Demo PIN";var b=E("button","btn","Sign in",ab);
+  b.onclick=function(){B.login(i.value).then(function(ok){if(!ok){toast("Wrong credentials");return}adm.ok=1;B.watch("bookings",true,function(a){adm.bk=a;drawAdm()});B.watch("msgs",true,function(a){adm.ms=a;drawAdm()});drawAdm()})};return}
+ var r=E("div","row",null,ab);[["b","📅 Bookings ("+adm.bk.length+")"],["m","💬 Messages"]].forEach(function(x){var b=E("button","btn"+(adm.t==x[0]?"":" o"),x[1],r);b.onclick=function(){adm.t=x[0];drawAdm()}});
+ if(adm.t=="b"){if(!adm.bk.length)E("small",null,"No bookings yet.",ab);adm.bk.slice().sort(function(a,b){return b.t-a.t}).forEach(function(k){var c=E("div","card",null,ab);E("h3",null,"📚 "+k.course,c);E("p",null,"👤 "+k.name+"  |  📞 "+k.contact+(k.notes?"\n📝 "+k.notes:"")+"\n🕒 "+fmt(k.t),c).style.whiteSpace="pre-line"});return}
+ var g={};adm.ms.forEach(function(m){(g[m.uid]=g[m.uid]||[]).push(m)});
+ var ids=Object.keys(g).sort(function(a,b){return Math.max.apply(0,g[b].map(function(m){return m.t}))-Math.max.apply(0,g[a].map(function(m){return m.t}))});
+ if(!ids.length){E("small",null,"No messages yet.",ab);return}
+ if(!adm.sel||!g[adm.sel])adm.sel=ids[0];
+ ids.forEach(function(u){var ms=g[u].sort(function(a,b){return a.t-b.t}),cl=ms.filter(function(m){return m.from=="c"})[0]||ms[0],b=E("button","li"+(u==adm.sel?" on":""),null,ab);E("b",null,cl.name,b);E("div",null,ms[ms.length-1].text.slice(0,60),b).style.fontSize=".85rem";b.onclick=function(){adm.sel=u;drawAdm()}});
+ var cur=g[adm.sel],c0=cur.filter(function(m){return m.from=="c"})[0]||cur[0];E("small",null,"Contact: "+(c0.contact||"not provided"),ab);
+ var mx=E("div","mx",null,ab);cur.forEach(function(m){E("div","m "+(m.from=="c"?"b":"u"),m.text,mx)});mx.scrollTop=1e9;
+ var ta=E("textarea",null,null,ab);ta.rows=2;ta.placeholder="Write your reply…";ta.value=adm.draft;ta.oninput=function(){adm.draft=ta.value};
+ var sb=E("button","btn","Send reply",ab);sb.onclick=function(){var t=ta.value.trim();if(!t)return;adm.draft="";B.add("msgs",{uid:adm.sel,name:"ORYNTRA",from:"a",text:t,t:Date.now()})}}
+function chkHash(){if(location.hash=="#admin"){ov3.classList.add("open");drawAdm()}}
+addEventListener("hashchange",chkHash);
+function start(){B.watch("msgs",false,function(a){myMsgs=a.sort(function(x,y){return x.t-y.t});drawChat();if(ov1.classList.contains("open"))seen();else badge()});
+ B.watch("bookings",false,function(a){var k=Object.keys(MY).join();MY={};a.forEach(function(b){MY[b.course]=1});if(Object.keys(MY).join()!=k)render()});chkHash()}
+(cloud?(B=FB,FB.init()):Promise.resolve()).catch(function(){B=L;cloud=false;toast("Could not reach the server. Running in demo mode.")}).then(start);
+})();
+</script>
+<script>
+(function(){
+/* ===== LESSONS: add your videos here =====
+   "Course name": [["Lesson title","YouTubeVideoID",1 for free preview or 0 for locked], ...]
+   Use YouTube videos set to Unlisted. Courses not listed use the default outline below. */
+var LESSONS={};
+var DEF=[["Introduction & what you will build","",1],["Core concepts","",0],["Hands-on practice","",0],["Final project","",0],["Wrap-up & next steps","",0]];
+var E=function(t,c,x,p){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;if(p)p.appendChild(e);return e};
+var o=E("div","ov",null,document.body);o.id="mless";
+o.innerHTML='<div class="md" style="width:min(560px,100%)"><h3><span id="lt">Lessons</span><button class="x" data-c>✕</button></h3><div class="bd" id="lb"></div></div>';
+function play(v,l){v.innerHTML="";if(!/^[\w-]{11}$/.test(l[1])){E("div","ok","🎬 This lesson's video will be added soon.",v);return}
+ var w=E("div","vid",null,v),f=E("iframe",null,null,w);f.src="https://www.youtube-nocookie.com/embed/"+l[1]+"?rel=0&autoplay=1";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;f.title=l[0]}
+function openL(c){var ls=LESSONS[c]||DEF,booked=(window.MY||{})[c],b=document.getElementById("lb");b.innerHTML="";
+ document.getElementById("lt").textContent="▶ "+c;
+ var v=E("div",null,null,b);
+ E("small",null,booked?"✅ You are booked. All lessons are unlocked.":"Lesson 1 is a free preview. Book your seat to unlock the rest.",b);
+ ls.forEach(function(l,k){var ok=l[2]||booked,btn=E("button","li",null,b);E("b",null,(k+1)+". "+l[0],btn);E("div",null,ok?(l[2]?"Free preview":"Unlocked"):"🔒 Locked",btn).style.fontSize=".82rem";
+  btn.onclick=function(){if(!ok){toast("Book this course to unlock this lesson");return}play(v,l)}});
+ if(!booked){var bb=E("button","btn","Book your seat",b);bb.onclick=function(){o.classList.remove("open");window.oryRoute(c)}}
+ o.classList.add("open")}
+document.addEventListener("click",function(e){var c=e.target.dataset&&e.target.dataset.l;if(c)openL(c)});
+})();
+</script>
+</body>
+</html>
